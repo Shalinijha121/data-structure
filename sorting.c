@@ -1,13 +1,33 @@
-#include<stdio.h>
-int main(){
-// i adding here hello world
-printf("hello world");
-// now form here you guys add sorting algorithms
-//praduman
+//shoaib
+//shalini here i implemented bubble sort algorithm
+/* Bubble sort code */
+#include <stdio.h>
 
-// shoaib
+int main()
+{
+  int array[100], n, i, j, swap;
+  printf("Enter number of elements\n");==
+  scanf("%d", &n);
+  
+  printf("Enter %d integers\n", n);
 
-// shalni
+  for (i = 0; i < n; i++)
+    scanf("%d", &array[i]);
 
-return 0;
+  for (i = 0 ; i < n - 1; i++)
+  {
+    for (j = 0 ; j < n - i - 1; j++)
+    {
+      if (array[j] > array[j+1]) /* For decreasing order use '<' instead of '>' */
+      {
+        swap  = array[j];
+        array[j] = array[j+1];
+        array[j+1] = swap;
+      }
+    }
+  }
+  printf("Sorted list in ascending order:\n");
+  for (i = 0; i < n; i++)
+     printf("%d\t", array[i]);
+  return 0;
 }
